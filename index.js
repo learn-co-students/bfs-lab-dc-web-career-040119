@@ -20,7 +20,6 @@ const bfs = (node, vertices, edges) => {
     queue.push(node)
     node.distance = 0
     while (queue.length > 0) {
-        debugger
         const adjacentNodes = findAdjacent(queue[0].name, vertices, edges)
         markDistanceAndPredecessor(node, adjacentNodes)
         queue = [...queue, ...adjacentNodes]
